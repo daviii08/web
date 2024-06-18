@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heladería DIGA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #48718d;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #84abca;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav button {
+            background-color: #84abca;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        nav button:hover {
+            background-color: #ff6f61;
+        }
+        .container {
+            text-align: center;
+            padding-top: 20px;
+        }
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 80%;
+            max-width: 600px;
+        }
+        .content img {
+            display: block;
+            margin: 20px auto 0;
+            max-width: 100%;
+            height: auto;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenidos a Heladería DIGA</h1>
+</header>
+
+<nav>
+    <button onclick="showContent('inicio')">Inicio</button>
+    <button onclick="showContent('mision')">Nuestra Misión</button>
+    <button onclick="showContent('vision')">Visión</button>
+    <button onclick="showContent('filosofia')">Filosofía</button>
+    <button onclick="showContent('cronograma')">Cronograma</button>
+    <button onclick="showContent('objetivos')">Objetivos</button>
+    <button onclick="showContent('diagrama')">Diagrama</button>
+    <button onclick="showContent('organigrama')">Organigrama</button>
+    <button onclick="showContent('integrantes')">Integrantes</button>
+</nav>
+
+<div class="container">
+    <div class="content" id="content">
+        <p>Haz clic en un botón para ver el contenido.</p>
+    </div>
+</div>
+
+<script>
+    function showContent(section) {
+        let content = '';
+        if (section === 'inicio') {
+            content = `<h2>Bienvenidos a Heladería DIGA</h2>
+                       <p>Descubre los mejores helados artesanales de la ciudad, hechos con ingredientes frescos y naturales. ¡Te esperamos!</p>
+                       <img src="inicio.png" alt="Inicio">`;
+        } else if (section === 'mision') {
+            content = `<h2>Nuestra Misión</h2>
+                       <p>En Heladería DIGA, nuestra misión es deleitar a nuestros clientes con helados artesanales de la más alta calidad, elaborados con ingredientes frescos y naturales. Nos esforzamos por crear un ambiente acogedor y amigable donde cada visita sea una experiencia memorable.</p>
+                       <img src="mision.png" alt="Nuestra Misión">`;
+        } else if (section === 'vision') {
+            content = `<h2>Visión</h2>
+                       <p>Nuestra visión es convertirnos en la heladería de referencia en la comunidad, reconocida por nuestra innovación en sabores y nuestro compromiso con la sostenibilidad y la responsabilidad social. Aspiramos a expandir nuestra presencia y llevar la felicidad de nuestros helados a más personas.</p>
+                       <img src="vision.png" alt="Visión">`;
+        } else if (section === 'filosofia') {
+            content = `<h2>Filosofía</h2>
+                       <p>En Heladería DIGA, creemos que el helado es más que un postre; es una forma de compartir momentos especiales y crear recuerdos. Nuestra filosofía se basa en la pasión por la calidad, la creatividad en nuestros productos y el respeto por el medio ambiente. Trabajamos con productores locales para asegurar que cada bocado sea una celebración de sabores auténticos y sostenibles.</p>
+                       <img src="filosofia.png" alt="Filosofía">`;
+        } else if (section === 'cronograma') {
+            content = `<h2>Cronograma</h2>
+                       <p>Heladería DIGA</p>
+                       <img src="organigrama.png" alt="Cronograma">`;
+        } else if (section === 'objetivos') {
+            content = `<h2>Objetivos</h2>
+                       <p>1. Incrementar las ventas en un 15% durante el próximo trimestre mediante 
+estrategias de marketing digital, promociones en redes sociales y colaboraciones 
+con empresas locales.
+
+<p> 2. Reducir los costos operativos en un 10% para aumentar la rentabilidad, 
+revisando proveedores, optimizando el uso de materias primas y mejorando la 
+eficiencia en el proceso de producción.
+ <p>   3. Mejorar la experiencia del cliente implementando un programa de fidelización que 
+ofrezca incentivos como descuentos especiales, tarjetas de puntos o regalos por 
+compras frecuentes.
+<p>4. Ampliar el horario de atención al cliente durante los fines de semana para captar 
+un mayor número de clientes y aumentar las ventas fuera del horario habitual.
+<p>5. Capacitar al personal en técnicas de servicio al cliente y en la elaboración de 
+nuevos sabores de helado para garantizar una atención de calidad y una oferta 
+innovadora.
+<p>6. Realizar al menos dos eventos promocionales en el próximo mes, como 
+degustaciones gratuitas de nuevos productos o actividades temáticas, para atraer 
+la atención de nuevos clientes y generar interés en la comunidad.
+<p>7. Mejorar la presencia en línea mediante la actualización regular del sitio web, la 
+publicación de contenido relevante en el blog y la participación activa en plataformas 
+de redes sociales para aumentar la visibilidad y el compromiso de la marca.
+<p>8. Implementar medidas de sostenibilidad, como la reducción del uso de plásticos 
+de un solo uso, la compra de ingredientes locales y orgánicos cuando sea posible y 
+el reciclaje de residuos, para cumplir con las expectativas de los clientes y contribuir 
+al cuidado del medio ambiente.
+
+<p>9. Realizar un análisis de la competencia local para identificar oportunidades de 
+mejora y diferenciación en cuanto a productos, precios y servicios ofrecidos.
+
+<p>10. Obtener retroalimentación regular de los clientes a través de encuestas de satisfacción 
+y comentarios en línea para identificar áreas de mejora y ajustar las estrategias de negocio 
+en consecuencia</p>
+                       <img src="filosofia.png" alt="Objetivos">`;
+        } else if (section === 'diagrama') {
+            content = `<h2>Diagrama</h2>
+                       <p>Heladería DIGA</p>
+                       <img src="diagrama.png" alt="Diagrama">`;
+        } else if (section === 'organigrama') {
+            content = `<h2>Organigrama</h2>
+                       <p>Heladería DIGA</p>
+                       <img src="cronograma.png" alt="Organigrama">`;
+        } else if (section === 'integrantes') {
+            content = `<h2>Integrantes</h2>
+                       <p>Heladería DIGA</p>
+                       <img src="integrantes.png" alt="Integrantes">`;
+        }
+        document.getElementById('content').innerHTML = content;
+        document.getElementById('content').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
+
+
+
